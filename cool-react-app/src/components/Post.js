@@ -5,8 +5,8 @@ class Post extends Component {
     render() {
         return (
             <div className="Post">
-                <h2 className="Post__title">Post Title</h2>
-                <p className="Post__body">Post BodyPost BodyPost BodyPost BodyPost BodyPost BodyPost BodyPost Body</p>
+                <h2 className="Post__title">{this.props.title}</h2>
+                <p className="Post__body">{this.props.body}</p>
             </div>
         )
     }

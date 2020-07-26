@@ -11,7 +11,7 @@ Checkout the branch which you need.
 1. Checkout the branch using below command.
 
 ```sh
-    $ git checkout 2_create_component
+    $ git checkout 3_passing_props
 ```
 
 2. Run the app
