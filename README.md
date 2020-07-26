@@ -3,3 +3,19 @@
 ## Getting Started
 
 Checkout the branch which you need.
+
+*********
+
+### Create Components
+
+1. Checkout the branch using below command.
+
+```sh
+    $ git checkout 2_create_component
+```
+
+2. Run the app
+
+```sh
+    $ npm start
+```

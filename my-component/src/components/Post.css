@@ -1,0 +1,16 @@
+.Post {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+}
+
+.Post__title {
+    font-weight: normal;
+}
+
+.Post__body {
+    white-space: normal;
+}

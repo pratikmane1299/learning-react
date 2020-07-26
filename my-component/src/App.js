@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
+import Post from './components/Post';
 
 class App extends React.Component {
-  render () {
+  render() {
     return (
       <div className="App">
-        <h1>Hello from React !</h1>
+        <h1 className="App__title">Learning Components</h1>
+        <div className="App__body">
+          <Post />
+          <Post />
+          <Post />
+        </div>
       </div>
     )
   }
