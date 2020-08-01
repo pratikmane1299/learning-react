@@ -1,5 +1,5 @@
 body {
-  width: 80%;
+  width: 800px;
   margin: 2em auto 0 auto;
 }
 
@@ -9,37 +9,17 @@ h1 {
 
 form, input, button, label {
   display: block;
-  width: 100%;
-  margin-bottom: 0.4rem;
+  width: 400px;
+  margin: 0 auto 0.4rem auto;
 }
 
-section {
-  margin-top: 1rem;
-  -webkit-column-count: 4;
-  column-count: 4;
+.post-grid {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .post {
   width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  section {
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
-@media (max-width: 790px) {
-  section {
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-
-@media (max-width: 576px) {
-  section {
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
 }

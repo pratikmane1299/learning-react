@@ -61,7 +61,7 @@ class App extends React.Component {
           handleChange={this.handleChange} 
           handleFormSubmit={this.handleFormSubmit} 
         />
-        <section>
+        <section className="post-grid">
           {
             posts.map(p => {
               return <Post key={p.id} post={p} className="post" />
