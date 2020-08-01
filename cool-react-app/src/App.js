@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post';
+import AddPostForm from './components/AddPostForm'
 
 class App extends React.Component {
   state = {
@@ -49,29 +50,16 @@ class App extends React.Component {
   }
 
   render() {
-    const { posts } = this.state;
+    const { posts, title, body } = this.state;
     return (
       <>
         <h1>Learning React</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Title</label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            value={this.state.title}
-            onChange={this.handleChange}
-          />
-          <label>Body</label>
-          <input
-            type="text"
-            id="body"
-            name="body"
-            value={this.state.body}
-            onChange={this.handleChange}
-          />
-          <button>Add Post</button>
-        </form>
+        <AddPostForm 
+          title={title} 
+          body={body} 
+          handleChange={this.handleChange} 
+          handleFormSubmit={this.handleFormSubmit} 
+        />
         <section>
           {
             posts.map(p => {
