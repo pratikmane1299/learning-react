@@ -38,7 +38,7 @@ class App extends React.Component {
     if (this.state.title === '' || this.state.body === '') return;
 
     const newPost = {
-      id: this.state.posts.length+1,
+      id: this.state.posts.length + 1,
       title: this.state.title,
       body: this.state.body
     };
@@ -55,19 +55,23 @@ class App extends React.Component {
     return (
       <>
         <h1>Learning React</h1>
-        <AddPostForm 
-          title={title} 
-          body={body} 
-          handleChange={this.handleChange} 
-          handleFormSubmit={this.handleFormSubmit} 
+        <AddPostForm
+          title={title}
+          body={body}
+          handleChange={this.handleChange}
+          handleFormSubmit={this.handleFormSubmit}
         />
-        <section className="post-grid">
-          {
-            posts.map(p => {
-              return <Post key={p.id} post={p} className="post" />
-            })
-          }
-        </section>
+        {
+          posts.length > 0 ? (
+            <section className="post-grid">
+              {
+                posts.map(p => {
+                  return <Post key={p.id} post={p} className="post" />
+                })
+              }
+            </section>
+          ) : null
+        }
       </>
     )
   }
