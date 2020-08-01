@@ -38,6 +38,7 @@ class App extends React.Component {
     if (this.state.title === '' || this.state.body === '') return;
 
     const newPost = {
+      id: this.state.posts.length+1,
       title: this.state.title,
       body: this.state.body
     };
@@ -63,7 +64,7 @@ class App extends React.Component {
         <section>
           {
             posts.map(p => {
-              return <Post post={p} className="post" />
+              return <Post key={p.id} post={p} className="post" />
             })
           }
         </section>
