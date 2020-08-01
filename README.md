@@ -6,7 +6,7 @@ Checkout the branch which you need.
 
 *********
 
-### Create Components
+### Passing props to our component
 
 1. Checkout the branch using below command.
 
