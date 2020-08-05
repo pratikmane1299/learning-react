@@ -6,12 +6,12 @@ Checkout the branch which you need.
 
 *********
 
-### Making HTTP request in react 
+### Converting our components to functional components 
 
 1. Checkout the branch using below command.
 
 ```sh
-    $ git checkout 5_making_http_request
+    $ git checkout 6_converting_to_functional_components
 ```
 
 2. Run the app

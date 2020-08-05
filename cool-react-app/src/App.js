@@ -1,60 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Post from './components/Post';
 import AddPostForm from './components/AddPostForm'
 
-class App extends React.Component {
-  state = {
-    posts: [],
-    title: '',
-    body: ''
-  };
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
 
-  componentDidMount() {
+  useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(data => {
         const posts = data.slice(0, 10);
-        this.setState({
-          posts
-        });
+
+        setPosts(posts);
       });
-  }
-
-  handleChange = (e) => {
+  }, []);
+  
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value
-    });
+    if (name === 'title') {
+      setTitle(value);
+    } else {
+      setBody(value);
+    }
   }
 
-  handleFormSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (this.state.title === '' || this.state.body === '') return;
+    if (title === '' || body === '') return;
 
     const newPost = {
-      id: this.state.posts.length + 1,
-      title: this.state.title,
-      body: this.state.body
+      id: posts.length + 1,
+      title,
+      body
     };
 
-    this.setState({
-      posts: [newPost, ...this.state.posts],
-      title: '',
-      body: ''
-    });
+    setPosts([newPost, ...posts]);
+
+    setTitle('');
+    setBody('');
   }
 
-  render() {
-    const { posts, title, body } = this.state;
     return (
       <>
         <h1>Learning React</h1>
         <AddPostForm
           title={title}
           body={body}
-          handleChange={this.handleChange}
-          handleFormSubmit={this.handleFormSubmit}
+          handleChange={handleChange}
+          handleFormSubmit={handleFormSubmit}
         />
         {
           posts.length > 0 ? (
@@ -69,7 +65,6 @@ class App extends React.Component {
         }
       </>
     )
-  }
 }
 
 export default App;
