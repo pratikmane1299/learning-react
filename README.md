@@ -6,12 +6,12 @@ Checkout the branch which you need.
 
 *********
 
-### State in React
+### Making HTTP request in react 
 
 1. Checkout the branch using below command.
 
 ```sh
-    $ git checkout 4_state
+    $ git checkout 5_making_http_request
 ```
 
 2. Run the app

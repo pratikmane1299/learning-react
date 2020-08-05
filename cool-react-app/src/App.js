@@ -5,26 +5,21 @@ import AddPostForm from './components/AddPostForm'
 
 class App extends React.Component {
   state = {
-    posts: [
-      {
-        id: 1,
-        title: 'First Post',
-        body: 'This is my first post'
-      },
-      {
-        id: 2,
-        title: 'Second Post',
-        body: 'This is my second post'
-      },
-      {
-        id: 3,
-        title: 'Another awesome Post',
-        body: 'This is another awesome post'
-      }
-    ],
+    posts: [],
     title: '',
     body: ''
   };
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(data => {
+        const posts = data.slice(0, 10);
+        this.setState({
+          posts
+        });
+      });
+  }
 
   handleChange = (e) => {
     const { name, value } = e.target;
