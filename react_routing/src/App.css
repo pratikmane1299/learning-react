@@ -1,38 +1,151 @@
-.App {
+.navbar {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #20232a;
+}
+
+.nav-link {
+  margin: 0 0.5rem;
+  color: #20232a;
+}
+
+.team-card {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #c2bdbd;
+  border-radius: 8px;
+
+  font-family: inherit;
+}
+
+.team-info-line {
+  display: flex;
+  position: relative;
+}
+
+.team-crest {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.team-crest > img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+  /* margin-bottom: 0.25rem; */
+}
+
+.team-info {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-info .name {
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
+  color: inherit;
+}
+
+.venue {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  color: inherit;
+}
+
+.team-details-container {
+  margin: 1rem auto;
+  width: 90%;
+  font-family: inherit;
+}
+
+.team-details-info {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-details-crest {
+  /* position: relative; */
+  width: 200px;
+  height: 180px; 
+}
+
+.team-details-crest > img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-details {
+  margin: 0.5rem;
+}
+
+.team-details .name {
+  font-size: 1.6rem;
+  margin: 0.1rem 0.5rem;
+  color: inherit;
+}
+
+.team-short-name, .team-club-colors, .team-established {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.2rem 0.5rem;
+  color: inherit;
+}
+
+.team-squad-members-container {
+  margin: 0.5rem;
+}
+.squad-members-title {
+  display: block;
+  margin: 0 0 0 0.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.squad-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: -1rem -1rem; */
+  padding-bottom: 3rem;
+  
+}
+
+.squad-members .member {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* flex: 1 0 22rem; */
+  flex: 25.10% 0;
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+  border: 1px solid #eee;
+  box-shadow: 0 2px #ccc;
+  border-radius: 4px;
+}
+
+.loading {
+  font-size: 1.3rem;
+  margin-top: 1rem;;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100%;
+  height: 100%;
+  margin: 1.5rem auto;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  text-align: center;
 }
