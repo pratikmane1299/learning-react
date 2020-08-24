@@ -21,3 +21,5 @@ Checkout the branch which you need.
 7. [Routing in ReactJS using React Router.](https://github.com/pratikmane1299/learning-react/tree/7_routing_in_react)
 
 8. [Validating Forms (Class Components).](https://github.com/pratikmane1299/learning-react/tree/8_form_validation_class_components)
+
+9. [Validating Forms (React Functional Components).](https://github.com/pratikmane1299/learning-react/tree/9_form_validation_func_components_1)
